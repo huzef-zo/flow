@@ -18,22 +18,37 @@ export function renderBrowse(container) {
     ),
   ));
 
-  /* --- Tools --- */
+  /* Mindful banner */
+  const mindfulBanner = h('div', { class: 'mindful-banner' },
+    h('div', { class: 'mindful-content' },
+      h('div', { class: 'mindful-tag' },
+        ui.icon('sparkle', 14),
+        h('span', {}, 'Daily Philosophy'),
+      ),
+      h('div', { class: 'mindful-quote' }, '“Simplicity is about subtracting the obvious and adding the meaningful.”'),
+      h('div', { class: 'mindful-sub' }, 'Organize space to protect deep focus'),
+    ),
+  );
+  container.append(mindfulBanner);
+
+  /* --- Tools (Bento Grid) --- */
   const tools = [
-    ['grid', 'Eisenhower matrix', 'Urgent vs important', '#/matrix'],
-    ['flame', 'Habits', 'Streaks & heatmap', '#/habits'],
-    ['timer', 'Focus timer', 'Pomodoro per task', '#/focus'],
-    ['settings', 'Settings', 'Theme, data, sync', '#/settings'],
+    ['grid', 'Eisenhower', 'Urgent vs important triage', '#/matrix'],
+    ['flame', 'Habits', 'Daily cadence & rhythm tracking', '#/habits'],
+    ['timer', 'Focus timer', 'Pomodoro & single-task focus', '#/focus'],
+    ['settings', 'Settings', 'Preferences, sync & storage', '#/settings'],
   ];
   const toolGrid = h('div', { class: 'tool-grid' });
   for (const [ic, title, sub, href] of tools) {
     toolGrid.append(h('a', { class: 'tool-card', href, onClick: () => { location.hash = href; } },
-      h('span', { class: 'tool-icon' }, ui.icon(ic, 22)),
-      h('span', { class: 'tool-name' }, title),
-      h('span', { class: 'tool-sub muted small' }, sub),
+      h('div', { class: 'tool-icon-wrap' }, ui.icon(ic, 20)),
+      h('div', { class: 'tool-meta' },
+        h('span', { class: 'tool-name' }, title),
+        h('span', { class: 'tool-sub' }, sub),
+      ),
     ));
   }
-  container.append(h('div', { class: 'section-label' }, 'Tools'), toolGrid);
+  container.append(h('div', { class: 'section-label' }, 'Spaces & Focus'), toolGrid);
 
   /* --- Areas & projects --- */
   const projectsCol = h('div', {});
