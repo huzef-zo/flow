@@ -2,76 +2,194 @@
  * base.css — design tokens, reset, typography, utilities.
  * Flow: calm, soft-neutral, one accent. Light & dark themes, accent set
  * by JS via --accent (6 presets, all AA-contrast on both themes).
+ * Design tokens extracted from /design/*.html.
  * ================================================================== */
 
 :root {
-  /* Neutral palette (light) — "clean sheet of paper" */
-  --bg: #fafaf7;
-  --bg-elevated: #ffffff;
-  --surface: #ffffff;
-  --surface-2: #f4f4ef;
-  --surface-3: #ecece6;
-  --text: #1c1b1a;
-  --text-2: #57534e;
-  --text-3: #8a857f;
-  --border: #e4e4dd;
-  --border-strong: #d4d4cc;
+  /* Neutral & Canvas palette (light) */
+  --bg: #FAFAF7;
+  --bg-elevated: #FFFFFF;
+  --surface: #FAFAF7;
+  --surface-card: #FFFFFF;
+  --surface-container-lowest: #FFFFFF;
+  --surface-container-low: #F1F3FF;
+  --surface-container: #E9EDFF;
+  --surface-container-high: #E1E8FD;
+  --surface-container-highest: #DCE2F7;
+  --surface-variant: #DCE2F7;
+  --surface-dim: #D3DAEF;
+  --surface-bright: #F9F9FF;
 
-  /* Accent (overridden by JS when the user picks a preset) */
-  --accent: #4f46e5;
-  --accent-ink: #ffffff;
-  --accent-soft: color-mix(in srgb, var(--accent) 12%, transparent);
-  --accent-softer: color-mix(in srgb, var(--accent) 7%, transparent);
+  /* Aliases for compatibility */
+  --surface-2: #F1F3FF;
+  --surface-3: #E9EDFF;
 
-  /* Semantic */
-  --danger: #dc2626;
-  --danger-soft: color-mix(in srgb, var(--danger) 10%, transparent);
-  --success: #15803d;
-  --p1: #dc2626;
-  --p2: #b45309;
-  --p3: #2563eb;
-  --p4: #a8a29e;
-  --event: #6b7280;
+  /* Typography Colors */
+  --text: #141B2B;
+  --text-2: #464555;
+  --text-3: #71717A;
+  --text-muted: #71717A;
+  --text-subtle: #A1A1AA;
+  --on-surface: #141B2B;
+  --on-surface-variant: #464555;
 
-  /* Geometry */
+  /* Borders & Outlines */
+  --border: #EEEEEC;
+  --border-subtle: #EEEEEC;
+  --border-strong: #E5E5DF;
+  --outline: #777587;
+  --outline-variant: #C7C4D8;
+
+  /* Accent & Primary (overridden by JS when user picks a preset) */
+  --accent: #4F46E5;
+  --accent-ink: #FFFFFF;
+  --accent-soft: #E9EDFF;
+  --accent-softer: #F1F3FF;
+  --primary: #3525CD;
+  --primary-container: #4F46E5;
+  --on-primary: #FFFFFF;
+  --on-primary-container: #DAD7FF;
+  --primary-fixed: #E2DFFF;
+  --primary-fixed-dim: #C3C0FF;
+
+  /* Secondary */
+  --secondary: #58579B;
+  --secondary-container: #B6B4FF;
+  --secondary-fixed: #E2DFFF;
+  --on-secondary-container: #454386;
+
+  /* Semantic & Priorities */
+  --danger: #BA1A1A;
+  --danger-soft: #FFDAD6;
+  --error: #BA1A1A;
+  --error-container: #FFDAD6;
+  --on-error-container: #93000A;
+
+  --p1: #BA1A1A;
+  --p1-bg: #FFDAD6;
+  --p2: #7E3000;
+  --p2-bg: #FFDBCC;
+  --p3: #2563EB;
+  --p3-bg: #E1E8FD;
+  --p4: #71717A;
+  --p4-bg: #EEEEEC;
+
+  --success: #15803D;
+  --success-soft: #DCFCE7;
+  --event: #6B7280;
+
+  /* Geometry & Radii */
+  --radius-xs: 4px;
   --radius-s: 8px;
   --radius: 12px;
-  --radius-l: 18px;
-  --shadow-1: 0 1px 2px rgb(28 27 26 / 0.05), 0 2px 8px rgb(28 27 26 / 0.05);
-  --shadow-2: 0 4px 14px rgb(28 27 26 / 0.10), 0 1px 3px rgb(28 27 26 / 0.06);
-  --shadow-3: 0 12px 40px rgb(28 27 26 / 0.18);
+  --radius-l: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
 
+  /* Elevation Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.02), 0 4px 12px rgba(17, 24, 39, 0.03);
+  --shadow-2: 0 4px 14px rgba(79, 70, 229, 0.25), 0 2px 6px rgba(0, 0, 0, 0.04);
+  --shadow-3: 0 12px 40px rgba(17, 24, 39, 0.12), 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-sheet: 0 -10px 35px rgba(0, 0, 0, 0.10);
+  --shadow-fab: 0 12px 28px -4px rgba(79, 70, 229, 0.35);
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 20px;
+  --space-xl: 32px;
+  --margin: 20px;
+  --gutter: 12px;
+
+  /* Typography Scale */
   --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --text-headline-xl: 700 34px/40px var(--font);
+  --text-headline-lg: 600 26px/32px var(--font);
+  --text-headline-md: 600 20px/26px var(--font);
+  --text-headline-sm: 600 17px/22px var(--font);
+  --text-body-lg: 400 16px/24px var(--font);
+  --text-body-md: 400 15px/22px var(--font);
+  --text-body-sm: 400 13px/18px var(--font);
+  --text-label-md: 500 13px/16px var(--font);
+  --text-label-sm: 600 11px/14px var(--font);
+
+  /* Layout dimensions */
   --header-h: 56px;
   --tabbar-h: 60px;
   --safe-top: env(safe-area-inset-top, 0px);
   --safe-bottom: env(safe-area-inset-bottom, 0px);
 
   --anim: 180ms cubic-bezier(0.2, 0.7, 0.3, 1);
-  --anim-slow: 320ms cubic-bezier(0.2, 0.7, 0.3, 1);
+  --anim-slow: 300ms cubic-bezier(0.2, 0.7, 0.3, 1);
 }
 
 [data-theme="dark"] {
-  --bg: #131313;
-  --bg-elevated: #1d1d1e;
-  --surface: #1d1d1e;
-  --surface-2: #262627;
-  --surface-3: #303032;
-  --text: #ececeb;
-  --text-2: #a8a29e;
-  --text-3: #78736e;
-  --border: #2c2c2e;
-  --border-strong: #3a3a3d;
-  --shadow-1: 0 1px 2px rgb(0 0 0 / 0.4), 0 2px 8px rgb(0 0 0 / 0.3);
-  --shadow-2: 0 4px 14px rgb(0 0 0 / 0.5), 0 1px 3px rgb(0 0 0 / 0.35);
-  --shadow-3: 0 12px 40px rgb(0 0 0 / 0.65);
-  --danger: #f87171;
-  --success: #4ade80;
-  --p1: #f87171;
-  --p2: #fbbf24;
-  --p3: #60a5fa;
-  --p4: #78736e;
-  --event: #9ca3af;
+  --bg: #111318;
+  --bg-elevated: #191C24;
+  --surface: #111318;
+  --surface-card: #191C24;
+  --surface-container-lowest: #14171F;
+  --surface-container-low: #191D26;
+  --surface-container: #202532;
+  --surface-container-high: #282E3E;
+  --surface-container-highest: #32394C;
+  --surface-variant: #32394C;
+  --surface-dim: #13161E;
+  --surface-bright: #2A3040;
+
+  --surface-2: #202532;
+  --surface-3: #282E3E;
+
+  --text: #EDF0FF;
+  --text-2: #A5ABBD;
+  --text-3: #71788E;
+  --text-muted: #8E95AA;
+  --text-subtle: #636A80;
+  --on-surface: #EDF0FF;
+  --on-surface-variant: #A5ABBD;
+
+  --border: #242938;
+  --border-subtle: #1F2330;
+  --border-strong: #333A4D;
+  --outline: #777E94;
+  --outline-variant: #3D455B;
+
+  --accent-soft: color-mix(in srgb, var(--accent) 18%, transparent);
+  --accent-softer: color-mix(in srgb, var(--accent) 10%, transparent);
+  --primary-fixed: #2E3160;
+  --primary-fixed-dim: #22254B;
+
+  --secondary: #A0A0DB;
+  --secondary-container: #33336B;
+  --on-secondary-container: #D1D0FF;
+
+  --danger: #FF8585;
+  --danger-soft: color-mix(in srgb, var(--danger) 18%, transparent);
+  --error: #FF8585;
+  --error-container: #4D1A1A;
+  --on-error-container: #FFDAD6;
+
+  --p1: #FF8585;
+  --p1-bg: color-mix(in srgb, #FF8585 18%, transparent);
+  --p2: #F59E0B;
+  --p2-bg: color-mix(in srgb, #F59E0B 18%, transparent);
+  --p3: #60A5FA;
+  --p3-bg: color-mix(in srgb, #60A5FA 18%, transparent);
+  --p4: #71788E;
+  --p4-bg: #202532;
+
+  --success: #4ADE80;
+  --success-soft: color-mix(in srgb, #4ADE80 18%, transparent);
+  --event: #9CA3AF;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.4), 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-2: 0 4px 14px rgba(0, 0, 0, 0.5);
+  --shadow-3: 0 12px 40px rgba(0, 0, 0, 0.6);
+  --shadow-sheet: 0 -10px 35px rgba(0, 0, 0, 0.6);
+  --shadow-fab: 0 12px 28px -4px rgba(0, 0, 0, 0.5);
 }
 
 /* ---------- Reset ---------- */
@@ -80,8 +198,8 @@ html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
   font-family: var(--font);
-  font-size: 15.5px;
-  line-height: 1.45;
+  font-size: 15px;
+  line-height: 22px;
   color: var(--text);
   background: var(--bg);
   overscroll-behavior-y: none;
@@ -102,16 +220,17 @@ ul, ol { margin: 0; padding: 0; }
   border-radius: 6px;
 }
 
-/* Slim scrollbars on desktop */
-::-webkit-scrollbar { width: 10px; height: 10px; }
+/* Slim scrollbars */
+::-webkit-scrollbar { width: 8px; height: 8px; }
 ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 8px; border: 2px solid transparent; background-clip: content-box; }
 ::-webkit-scrollbar-track { background: transparent; }
 
 /* ---------- Utilities ---------- */
-.muted { color: var(--text-2); }
-.small { font-size: 0.86rem; }
+.muted { color: var(--text-muted); }
+.subtle { color: var(--text-subtle); }
+.small { font-size: 13px; line-height: 18px; }
 .grow { flex: 1; }
-.row { display: flex; align-items: center; gap: 10px; }
+.row { display: flex; align-items: center; gap: 8px; }
 .hidden { display: none !important; }
 .sr-only {
   position: absolute; width: 1px; height: 1px; margin: -1px;

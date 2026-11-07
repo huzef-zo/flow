@@ -51,20 +51,9 @@ export function openTaskDetail(id, { focusField = null } = {}) {
     const t = block.props;
     content.innerHTML = '';
 
-    /* --- title + complete --- */
-    const titleInput = h('textarea', {
-      class: 'textarea detail-title', rows: '1', placeholder: 'Task title',
-      'aria-label': 'Task title',
-    });
-    titleInput.value = t.title || '';
-    autoGrow(titleInput);
-    titleInput.addEventListener('input', () => {
-      autoGrow(titleInput);
-      debouncedSave({ title: titleInput.value });
-    });
-
+    /* --- header bar: focus indicator + complete pill --- */
     const completeBtn = h('button', {
-      class: 'btn ' + (t.completedAt ? '' : 'btn-primary'),
+      class: 'btn ' + (t.completedAt ? '' : 'btn-primary') + ' detail-complete-btn',
       onClick: () => {
         if (t.completedAt) {
           store.uncompleteTask(id);
@@ -79,11 +68,33 @@ export function openTaskDetail(id, { focusField = null } = {}) {
         }
         render();
       },
-    }, icon('check', 18), t.completedAt ? 'Reopen task' : 'Complete');
+    }, icon('check', 16), t.completedAt ? 'Reopen' : 'Mark Complete');
+
+    const focusIndicator = h('div', { class: 'detail-focus-tag' },
+      icon('sparkle', 14),
+      h('span', {}, 'Focus Task'),
+    );
+
+    /* --- title with stationery look --- */
+    const titleInput = h('textarea', {
+      class: 'detail-title-input', rows: '1', placeholder: 'What needs doing?',
+      'aria-label': 'Task title',
+    });
+    titleInput.value = t.title || '';
+    autoGrow(titleInput);
+    titleInput.addEventListener('input', () => {
+      autoGrow(titleInput);
+      debouncedSave({ title: titleInput.value });
+    });
+
+    const titleSub = h('div', { class: 'detail-title-sub' },
+      icon('pencil', 13),
+      h('span', {}, 'Click title to edit · Auto-saved'),
+    );
 
     content.append(
-      h('div', { class: 'row detail-head' }, completeBtn),
-      titleInput,
+      h('div', { class: 'detail-head-bar' }, focusIndicator, completeBtn),
+      h('div', { class: 'detail-title-wrap' }, titleInput, titleSub),
     );
 
     /* --- quick chips row --- */
