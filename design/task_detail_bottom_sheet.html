@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#FAFAF7;color:#141b2b;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;font-family:'Inter',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-primary": "#c3c0ff", "background": "#f9f9ff", "primary-fixed": "#e2dfff", "on-secondary-fixed": "#140f54", "surface-canvas": "#FAFAF7", "surface-container-highest": "#dce2f7", "surface-card": "#FFFFFF", "on-tertiary": "#ffffff", "outline-variant": "#c7c4d8", "surface-container": "#e9edff", "surface": "#FAFAF7", "inverse-on-surface": "#edf0ff", "on-background": "#141b2b", "surface-variant": "#dce2f7", "on-tertiary-fixed": "#351000", "tertiary-fixed": "#ffdbcc", "on-primary-fixed": "#0f0069", "on-primary": "#ffffff", "tertiary": "#7e3000", "secondary-fixed": "#e2dfff", "surface-container-lowest": "#ffffff", "on-error": "#ffffff", "secondary-fixed-dim": "#c3c0ff", "inverse-surface": "#293040", "surface-dim": "#d3daef", "primary": "#3525cd", "surface-tint": "#4d44e3", "secondary": "#58579b", "border-strong": "#E5E5DF", "on-surface-variant": "#464555", "on-primary-fixed-variant": "#3323cc", "on-error-container": "#93000a", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#413f82", "primary-fixed-dim": "#c3c0ff", "outline": "#777587", "on-secondary": "#ffffff", "primary-container": "#4f46e5", "secondary-container": "#b6b4ff", "tertiary-container": "#a44100", "on-secondary-container": "#454386", "border-subtle": "#EEEEEC", "on-tertiary-fixed-variant": "#7b2f00", "on-primary-container": "#dad7ff", "on-surface": "#141b2b", "surface-bright": "#f9f9ff", "on-tertiary-container": "#ffd2be", "error": "#ba1a1a", "text-muted": "#71717A", "tertiary-fixed-dim": "#ffb695", "surface-container-low": "#f1f3ff", "surface-container-high": "#e1e8fd", "text-subtle": "#A1A1AA" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-md": "0.75rem", "space-xl": "2rem", "space-sm": "0.5rem", "margin": "1.25rem", "gutter": "0.75rem", "space-lg": "1.25rem", "space-xs": "0.25rem" }, fontFamily: { "headline-xl": ["Inter"], "body-md": ["Inter"], "body-lg": ["Inter"], "label-sm": ["Inter"], "headline-sm": ["Inter"], "body-sm": ["Inter"], "headline-md": ["Inter"], "headline-lg": ["Inter"], "label-md": ["Inter"] }, fontSize: { "headline-xl": ["34px", { "lineHeight": "40px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-md": ["15px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-sm": ["17px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-lg": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="h-14 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary-container text-[20px]">filter_vintage</span><h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Today</h1></div><div class="flex items-center gap-space-sm"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center rounded-full text-text-muted hover:text-on-surface"><span class="material-symbols-outlined text-[20px]">search</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-14 pb-28 px-margin bg-surface flex-1"><div class="flex flex-col w-full relative">
+<!-- Backdrop Simulated Surface Context (Faintly visible under scrim) -->
+<div aria-hidden="true" class="fixed inset-0 z-10 bg-on-background/35 backdrop-blur-sm pointer-events-none transition-opacity duration-300"></div>
+<!-- Ambient Workspace Dimmer Scrim & Modal Container -->
+<div class="relative z-20 w-full flex flex-col items-center">
+<!-- Tactile Bottom Sheet Container -->
+<div class="w-full bg-surface-container-lowest rounded-t-3xl shadow-[0_-12px_40px_rgba(17,24,39,0.12)] flex flex-col overflow-hidden transition-all duration-300">
+<!-- Top Tactile Drag Handle -->
+<div class="w-full pt-3 pb-2 flex justify-center items-center bg-surface-container-lowest select-none cursor-grab active:cursor-grabbing">
+<div class="w-10 h-1 rounded-full bg-outline-variant/60"></div>
+</div>
+<!-- Sheet Header & Primary Control Bar -->
+<div class="px-space-lg pt-1 pb-space-md flex items-center justify-between gap-space-sm bg-surface-container-lowest">
+<div class="flex items-center gap-space-xs text-text-muted">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-sm text-label-sm tracking-wide uppercase text-text-subtle">Focus Task</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="h-10 px-4 rounded-full bg-primary-container text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-[0_2px_8px_rgba(79,70,229,0.22)] active:scale-95 transition-all" id="completeBtn" onclick="toggleTaskCompletion()">
+<span class="material-symbols-outlined text-[18px]" id="completeIcon">check</span>
+<span id="completeText">Mark Complete</span>
+</button>
+<button aria-label="Close Task Sheet" class="w-9 h-9 rounded-full bg-surface-container-high/60 flex items-center justify-center text-text-muted hover:text-on-surface hover:bg-surface-container-highest transition-colors active:scale-95">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Task Title Area with Natural Stationery Typography -->
+<div class="px-space-lg pb-space-md bg-surface-container-lowest">
+<div class="group relative">
+<textarea class="w-full font-headline-lg text-headline-lg text-on-surface bg-transparent resize-none focus:outline-none focus:bg-surface-container-low/40 rounded-lg p-1.5 -ml-1.5 leading-snug transition-colors placeholder:text-text-subtle" placeholder="What needs doing?" rows="2">Finalize Q4 Product Roadmap &amp; Team Review</textarea>
+<div class="flex items-center gap-1.5 mt-0.5 px-0.5 text-text-subtle font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">edit_note</span>
+<span>Click title to edit · Auto-saved just now</span>
+</div>
+</div>
+</div>
+<!-- Tactile Chip Scroller (Metadata Properties) -->
+<div class="px-space-lg pb-space-lg bg-surface-container-lowest overflow-x-auto no-scrollbar flex items-center gap-2">
+<!-- Date Chip -->
+<button class="h-8 px-3 rounded-full bg-surface-container-high/70 hover:bg-surface-container-highest text-on-surface font-label-md text-label-md flex items-center gap-1.5 shrink-0 transition-colors">
+<span class="material-symbols-outlined text-primary-container text-[16px]">calendar_today</span>
+<span>Today, Oct 24</span>
+</button>
+<!-- Priority Chip (P1 High with delicate warm tint) -->
+<button class="h-8 px-3 rounded-full bg-error-container/60 hover:bg-error-container text-on-error-container font-label-md text-label-md flex items-center gap-1.5 shrink-0 transition-colors">
+<span class="material-symbols-outlined text-[16px]">flag</span>
+<span class="font-semibold">P1 High</span>
+</button>
+<!-- Project Chip -->
+<button class="h-8 px-3 rounded-full bg-surface-container-high/70 hover:bg-surface-container-highest text-on-surface font-label-md text-label-md flex items-center gap-1.5 shrink-0 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-text-muted">folder</span>
+<span>Product</span>
+</button>
+<!-- Labels Chip -->
+<button class="h-8 px-3 rounded-full bg-surface-container-high/70 hover:bg-surface-container-highest text-on-surface font-label-md text-label-md flex items-center gap-1.5 shrink-0 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-text-muted">label</span>
+<span>@planning, @review</span>
+</button>
+<!-- Repeat Chip -->
+<button class="h-8 px-3 rounded-full bg-surface-container-high/70 hover:bg-surface-container-highest text-on-surface font-label-md text-label-md flex items-center gap-1.5 shrink-0 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-text-muted">autorenew</span>
+<span>Weekdays</span>
+</button>
+<button aria-label="Add attribute" class="w-8 h-8 rounded-full bg-surface-container-high/50 hover:bg-surface-container-highest flex items-center justify-center text-text-muted shrink-0 transition-colors">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+<!-- Main Scrollable Body Content -->
+<div class="px-space-lg flex flex-col gap-space-xl bg-surface-canvas/50 pt-space-lg pb-10">
+<!-- Section 1: When & Scheduling -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-1">
+<h2 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[18px]">schedule</span>
+<span>When</span>
+</h2>
+<span class="font-label-sm text-label-sm text-text-muted bg-surface-container px-2 py-0.5 rounded-full">Calendar Blocked</span>
+</div>
+<!-- Structured Card: Scheduling Details -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-[0_1px_3px_rgba(0,0,0,0.02),0_4px_12px_rgba(17,24,39,0.03)] overflow-hidden">
+<!-- Planned Day -->
+<div class="p-3.5 flex items-center justify-between hover:bg-surface-container-low/50 transition-colors cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-xl bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]">event</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-muted">Planned Day</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">Today · Wednesday, Oct 24</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-subtle text-[18px]">chevron_right</span>
+</div>
+<!-- Start Time & Duration with subtle separator via container background -->
+<div class="h-[1px] w-full bg-surface-variant/40"></div>
+<div class="p-3.5 flex items-center justify-between hover:bg-surface-container-low/50 transition-colors cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-xl bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]">pace</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-muted">Focus Block &amp; Duration</span>
+<div class="flex items-center gap-2">
+<span class="font-body-md text-body-md text-on-surface font-medium">9:30 AM – 10:15 AM</span>
+<span class="bg-surface-container px-1.5 py-0.5 rounded text-[11px] font-label-sm text-primary-container font-semibold">45m</span>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-subtle text-[18px]">chevron_right</span>
+</div>
+<!-- Due Date -->
+<div class="h-[1px] w-full bg-surface-variant/40"></div>
+<div class="p-3.5 flex items-center justify-between hover:bg-surface-container-low/50 transition-colors cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-xl bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]">notification_important</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-muted">Hard Deadline</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">Today, 5:00 PM (End of day)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-subtle text-[18px]">chevron_right</span>
+</div>
+<!-- Reminder Notification -->
+<div class="h-[1px] w-full bg-surface-variant/40"></div>
+<div class="p-3.5 flex items-center justify-between hover:bg-surface-container-low/50 transition-colors cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-xl bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]">notifications_active</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-muted">Pre-task Alert</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">10 mins before (9:20 AM) · Push notification</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-subtle text-[18px]">tune</span>
+</div>
+<!-- Someday / Backlog Toggle -->
+<div class="h-[1px] w-full bg-surface-variant/40"></div>
+<div class="p-3.5 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-xl bg-surface-container flex items-center justify-center text-text-muted">
+<span class="material-symbols-outlined text-[18px]">inbox_customize</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">Someday / Backlog</span>
+<span class="font-body-sm text-body-sm text-text-muted">Move out of daily focus queue</span>
+</div>
+</div>
+<!-- Minimal Toggle Switch -->
+<button aria-pressed="false" class="w-11 h-6 rounded-full bg-surface-variant p-0.5 transition-colors duration-200 ease-in-out relative flex items-center" id="backlogToggle" onclick="toggleSwitch(this)">
+<span class="dot w-5 h-5 rounded-full bg-surface-container-lowest shadow-sm transform transition-transform duration-200"></span>
+</button>
+</div>
+</div>
+</div>
+<!-- Section 2: Markdown Notes -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-1">
+<h2 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[18px]">notes</span>
+<span>Notes</span>
+</h2>
+<!-- Segmented Pill Toggle [Edit | Preview] -->
+<div class="bg-surface-container-high p-0.5 rounded-full flex items-center">
+<button class="px-2.5 py-1 rounded-full font-label-sm text-label-sm text-text-muted hover:text-on-surface transition-colors" id="btn-edit" onclick="setTab('notes', 'edit')">Edit</button>
+<button class="px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-on-surface shadow-xs font-semibold transition-all" id="btn-preview" onclick="setTab('notes', 'preview')">Preview</button>
+</div>
+</div>
+<!-- Tactile Stationery Notes Container -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 shadow-[0_1px_3px_rgba(0,0,0,0.02),0_4px_12px_rgba(17,24,39,0.03)] flex flex-col gap-3">
+<div class="flex flex-col gap-3" id="notes-preview-content">
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                Review strategic goals with engineering and design leads ahead of the quarterly all-hands meeting. Focus on Q4 milestones and high-impact UX polish items.
+              </p>
+<!-- Markdown Interactive Checklist within Notes -->
+<div class="bg-surface-container-low/60 rounded-xl p-3 flex flex-col gap-2.5">
+<span class="font-label-sm text-label-sm text-text-muted tracking-wider uppercase">Alignment Points</span>
+<label class="flex items-start gap-2.5 cursor-pointer group select-none">
+<input checked="" class="mt-0.5 w-4 h-4 rounded text-primary-container focus:ring-0 accent-primary-container cursor-pointer" onchange="handleNotesCheck(this)" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-text-muted line-through group-hover:text-on-surface transition-colors">Gather feedback from UX team</span>
+</label>
+<label class="flex items-start gap-2.5 cursor-pointer group select-none">
+<input class="mt-0.5 w-4 h-4 rounded text-primary-container focus:ring-0 accent-primary-container cursor-pointer" onchange="handleNotesCheck(this)" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary-container transition-colors">Update OKR alignment slide</span>
+</label>
+<label class="flex items-start gap-2.5 cursor-pointer group select-none">
+<input class="mt-0.5 w-4 h-4 rounded text-primary-container focus:ring-0 accent-primary-container cursor-pointer" onchange="handleNotesCheck(this)" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary-container transition-colors">Sync with Dana on resource capacity</span>
+</label>
+</div>
+<!-- Attached Visual Brief Artifact -->
+<div class="mt-1 flex items-center gap-3 p-2 bg-surface-container rounded-xl">
+<img class="w-12 h-12 rounded-lg object-cover bg-surface-variant" data-alt="Minimalist design system presentation slide layout preview with clear editorial typography on clean white card background with soft indigo accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUoOxJQuhNI0Q4XyGexoxKcUImTiRFytnCRLcSVV5bCVgXK2mADiEs5oAw6o0541heqk8y5vss9YRk5lIcH0G1iXtojmysWiOfnYWdDjyIlV_oE1sFnPtbX5O_WQIv6Uy11tVM-af11u_1hMth19oU9vie4Htdl_ul_dQlq7jeFBdNTf2Ajojoeu6jf4V8ZYNMy6V4cuYu5wcX9xue7gp0esvTXdHZKuCya-g6Xc3b"/>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-md text-label-md text-on-surface truncate">Roadmap_Q4_Deck_v3.pdf</span>
+<span class="font-body-sm text-body-sm text-text-muted">4.8 MB · Updated yesterday</span>
+</div>
+<button aria-label="Open presentation deck preview" class="w-8 h-8 rounded-full bg-surface-container-lowest flex items-center justify-center text-text-muted hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- Editable Mode Area (Hidden by default) -->
+<div class="hidden flex-col gap-2" id="notes-edit-content">
+<textarea class="w-full bg-surface-container-low rounded-xl p-3 font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container resize-none" placeholder="Type Markdown notes here..." rows="6">Review strategic goals with engineering and design leads ahead of the quarterly all-hands meeting. Focus on Q4 milestones and high-impact UX polish items.
+
+- [x] Gather feedback from UX team
+- [ ] Update OKR alignment slide
+- [ ] Sync with Dana on resource capacity</textarea>
+</div>
+</div>
+</div>
+<!-- Section 3: Subtasks -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[18px]">checklist</span>
+<span>Subtasks</span>
+</h2>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface-variant px-2 py-0.5 rounded-full font-medium" id="subtaskCounter">2 of 4 done</span>
+</div>
+<!-- Quiet Progress Bar indicator -->
+<div class="w-20 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full transition-all duration-300" id="subtaskProgress" style="width: 50%;"></div>
+</div>
+</div>
+<!-- Subtasks List Card -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-[0_1px_3px_rgba(0,0,0,0.02),0_4px_12px_rgba(17,24,39,0.03)] overflow-hidden divide-y divide-surface-variant/40">
+<!-- Subtask 1: Checked -->
+<div class="p-3.5 flex items-center justify-between hover:bg-surface-container-low/40 transition-colors group">
+<div class="flex items-center gap-3 min-w-0 flex-1 cursor-pointer" onclick="toggleSubtask(this)">
+<div class="checkbox-box w-5 h-5 rounded-md bg-primary-container flex items-center justify-center text-on-primary shrink-0 transition-all">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<span class="subtask-text font-body-md text-body-md text-text-subtle line-through truncate">Consolidate sprint analytics</span>
+</div>
+<button aria-label="Reorder subtask" class="w-7 h-7 flex items-center justify-center text-text-subtle hover:text-on-surface opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[16px]">drag_indicator</span>
+</button>
+</div>
+<!-- Subtask 2: Checked -->
+<div class="p-3.5 flex items-center justify-between hover:bg-surface-container-low/40 transition-colors group">
+<div class="flex items-center gap-3 min-w-0 flex-1 cursor-pointer" onclick="toggleSubtask(this)">
+<div class="checkbox-box w-5 h-5 rounded-md bg-primary-container flex items-center justify-center text-on-primary shrink-0 transition-all">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<span class="subtask-text font-body-md text-body-md text-text-subtle line-through truncate">Verify release deadlines</span>
+</div>
+<button aria-label="Reorder subtask" class="w-7 h-7 flex items-center justify-center text-text-subtle hover:text-on-surface opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[16px]">drag_indicator</span>
+</button>
+</div>
+<!-- Subtask 3: Unchecked -->
+<div class="p-3.5 flex items-center justify-between hover:bg-surface-container-low/40 transition-colors group">
+<div class="flex items-center gap-3 min-w-0 flex-1 cursor-pointer" onclick="toggleSubtask(this)">
+<div class="checkbox-box w-5 h-5 rounded-md bg-surface-container flex items-center justify-center text-transparent hover:border-primary-container shrink-0 transition-all">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<span class="subtask-text font-body-md text-body-md text-on-surface truncate">Draft executive summary note</span>
+</div>
+<button aria-label="Reorder subtask" class="w-7 h-7 flex items-center justify-center text-text-subtle hover:text-on-surface opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[16px]">drag_indicator</span>
+</button>
+</div>
+<!-- Subtask 4: Unchecked -->
+<div class="p-3.5 flex items-center justify-between hover:bg-surface-container-low/40 transition-colors group">
+<div class="flex items-center gap-3 min-w-0 flex-1 cursor-pointer" onclick="toggleSubtask(this)">
+<div class="checkbox-box w-5 h-5 rounded-md bg-surface-container flex items-center justify-center text-transparent hover:border-primary-container shrink-0 transition-all">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<span class="subtask-text font-body-md text-body-md text-on-surface truncate">Share slide deck in #leadership</span>
+</div>
+<button aria-label="Reorder subtask" class="w-7 h-7 flex items-center justify-center text-text-subtle hover:text-on-surface opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[16px]">drag_indicator</span>
+</button>
+</div>
+<!-- Add Subtask Interactive Inline Field -->
+<div class="p-3 bg-surface-container-low/30 flex items-center gap-2.5">
+<div class="w-5 h-5 rounded-md bg-surface-container flex items-center justify-center text-text-muted">
+<span class="material-symbols-outlined text-[14px]">add</span>
+</div>
+<input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none placeholder:text-text-subtle" id="newSubtaskInput" onkeydown="handleSubtaskEnter(event)" placeholder="Add subtask… (Press Enter)" type="text"/>
+<button class="px-2.5 py-1 rounded-md bg-surface-container hover:bg-surface-container-highest text-on-surface font-label-sm text-label-sm transition-colors" onclick="addNewSubtaskFromInput()">
+                Add
+              </button>
+</div>
+</div>
+</div>
+<!-- Section 4: Utility Sheet Footer Actions -->
+<div class="pt-2 pb-6 flex items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<button class="h-10 px-3.5 rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1.5 shadow-[0_1px_3px_rgba(0,0,0,0.02)] transition-colors active:scale-95">
+<span class="material-symbols-outlined text-[16px] text-text-muted">content_copy</span>
+<span>Duplicate</span>
+</button>
+<button class="h-10 px-3.5 rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1.5 shadow-[0_1px_3px_rgba(0,0,0,0.02)] transition-colors active:scale-95">
+<span class="material-symbols-outlined text-[16px] text-text-muted">drive_file_move</span>
+<span>Move</span>
+</button>
+</div>
+<button class="h-10 px-3.5 rounded-full bg-surface-container-lowest hover:bg-error-container text-error font-label-md text-label-md flex items-center gap-1.5 shadow-[0_1px_3px_rgba(0,0,0,0.02)] transition-colors active:scale-95" onclick="confirmTaskDelete()">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+<span>Delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function toggleTaskCompletion() {
+    const btn = document.getElementById('completeBtn');
+    const icon = document.getElementById('completeIcon');
+    const text = document.getElementById('completeText');
+    const isCompleted = btn.getAttribute('data-completed') === 'true';
+
+    if (!isCompleted) {
+      btn.setAttribute('data-completed', 'true');
+      btn.classList.remove('bg-primary-container');
+      btn.classList.add('bg-surface-container-highest', 'text-on-surface');
+      icon.innerText = 'check_circle';
+      text.innerText = 'Completed';
+    } else {
+      btn.setAttribute('data-completed', 'false');
+      btn.classList.add('bg-primary-container');
+      btn.classList.remove('bg-surface-container-highest', 'text-on-surface');
+      icon.innerText = 'check';
+      text.innerText = 'Mark Complete';
+    }
+  }
+
+  function toggleSwitch(btn) {
+    const isPressed = btn.getAttribute('aria-pressed') === 'true';
+    const dot = btn.querySelector('.dot');
+    if (!isPressed) {
+      btn.setAttribute('aria-pressed', 'true');
+      btn.classList.remove('bg-surface-variant');
+      btn.classList.add('bg-primary-container');
+      dot.classList.add('translate-x-5');
+    } else {
+      btn.setAttribute('aria-pressed', 'false');
+      btn.classList.add('bg-surface-variant');
+      btn.classList.remove('bg-primary-container');
+      dot.classList.remove('translate-x-5');
+    }
+  }
+
+  function setTab(section, mode) {
+    const editBtn = document.getElementById('btn-edit');
+    const previewBtn = document.getElementById('btn-preview');
+    const previewContent = document.getElementById('notes-preview-content');
+    const editContent = document.getElementById('notes-edit-content');
+
+    if (mode === 'edit') {
+      editBtn.className = 'px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-on-surface shadow-xs font-semibold transition-all';
+      previewBtn.className = 'px-2.5 py-1 rounded-full font-label-sm text-label-sm text-text-muted hover:text-on-surface transition-colors';
+      previewContent.classList.add('hidden');
+      editContent.classList.remove('hidden');
+      editContent.classList.add('flex');
+    } else {
+      previewBtn.className = 'px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-on-surface shadow-xs font-semibold transition-all';
+      editBtn.className = 'px-2.5 py-1 rounded-full font-label-sm text-label-sm text-text-muted hover:text-on-surface transition-colors';
+      editContent.classList.add('hidden');
+      editContent.classList.remove('flex');
+      previewContent.classList.remove('hidden');
+      previewContent.classList.add('flex');
+    }
+  }
+
+  function handleNotesCheck(cb) {
+    const label = cb.nextElementSibling;
+    if (cb.checked) {
+      label.classList.add('line-through', 'text-text-muted');
+      label.classList.remove('text-on-surface');
+    } else {
+      label.classList.remove('line-through', 'text-text-muted');
+      label.classList.add('text-on-surface');
+    }
+  }
+
+  function toggleSubtask(wrapper) {
+    const box = wrapper.querySelector('.checkbox-box');
+    const txt = wrapper.querySelector('.subtask-text');
+    const isChecked = box.classList.contains('bg-primary-container');
+
+    if (isChecked) {
+      box.classList.remove('bg-primary-container', 'text-on-primary');
+      box.classList.add('bg-surface-container', 'text-transparent');
+      txt.classList.remove('line-through', 'text-text-subtle');
+      txt.classList.add('text-on-surface');
+    } else {
+      box.classList.add('bg-primary-container', 'text-on-primary');
+      box.classList.remove('bg-surface-container', 'text-transparent');
+      txt.classList.add('line-through', 'text-text-subtle');
+      txt.classList.remove('text-on-surface');
+    }
+    updateSubtaskStats();
+  }
+
+  function updateSubtaskStats() {
+    const total = document.querySelectorAll('.subtask-text').length;
+    const checked = document.querySelectorAll('.subtask-text.line-through').length;
+    const counter = document.getElementById('subtaskCounter');
+    const progress = document.getElementById('subtaskProgress');
+
+    if (counter) counter.innerText = `${checked} of ${total} done`;
+    if (progress && total > 0) {
+      const pct = Math.round((checked / total) * 100);
+      progress.style.width = `${pct}%`;
+    }
+  }
+
+  function handleSubtaskEnter(event) {
+    if (event.key === 'Enter') {
+      addNewSubtaskFromInput();
+    }
+  }
+
+  function addNewSubtaskFromInput() {
+    const input = document.getElementById('newSubtaskInput');
+    const val = input.value.trim();
+    if (!val) return;
+
+    const container = input.parentElement.parentElement;
+    const addRow = input.parentElement;
+
+    const row = document.createElement('div');
+    row.className = 'p-3.5 flex items-center justify-between hover:bg-surface-container-low/40 transition-colors group';
+    row.innerHTML = `
+      <div class="flex items-center gap-3 min-w-0 flex-1 cursor-pointer" onclick="toggleSubtask(this)">
+        <div class="checkbox-box w-5 h-5 rounded-md bg-surface-container flex items-center justify-center text-transparent shrink-0 transition-all">
+          <span class="material-symbols-outlined text-[14px]">check</span>
+        </div>
+        <span class="subtask-text font-body-md text-body-md text-on-surface truncate">${val}</span>
+      </div>
+      <button aria-label="Reorder subtask" class="w-7 h-7 flex items-center justify-center text-text-subtle hover:text-on-surface opacity-0 group-hover:opacity-100 transition-opacity">
+        <span class="material-symbols-outlined text-[16px]">drag_indicator</span>
+      </button>
+    `;
+
+    container.insertBefore(row, addRow);
+    input.value = '';
+    updateSubtaskStats();
+  }
+
+  function confirmTaskDelete() {
+    const confirmPrompt = confirm('Delete this task and all associated subtasks?');
+    if (confirmPrompt) {
+      window.history.back();
+    }
+  }
+</script></main><div class="fixed bottom-24 right-5 z-40 pb-safe"><button aria-label="New Task" class="w-14 h-14 rounded-full bg-primary-container text-on-primary shadow-[0_12px_28px_-4px_rgba(79,70,229,0.35)] flex items-center justify-center hover:opacity-95 transition-transform active:scale-95"><span class="material-symbols-outlined text-[26px]">add</span></button></div><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary-container font-medium"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] text-text-muted hover:text-on-surface" data-path="inbox" href="#"><span class="material-symbols-outlined text-[22px]">inbox</span><span class="font-label-sm text-label-sm">Inbox</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] text-text-muted hover:text-on-surface" data-path="today" href="#"><span class="material-symbols-outlined text-[22px]">today</span><span class="font-label-sm text-label-sm">Today</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] text-text-muted hover:text-on-surface" data-path="upcoming" href="#"><span class="material-symbols-outlined text-[22px]">calendar_month</span><span class="font-label-sm text-label-sm">Upcoming</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] text-text-muted hover:text-on-surface" data-path="browse" href="#"><span class="material-symbols-outlined text-[22px]">folder_open</span><span class="font-label-sm text-label-sm">Browse</span></a></div></nav></body></html>

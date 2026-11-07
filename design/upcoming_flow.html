@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#FAFAF7;color:#141b2b;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;font-family:'Inter',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-primary": "#c3c0ff", "background": "#f9f9ff", "primary-fixed": "#e2dfff", "on-secondary-fixed": "#140f54", "surface-canvas": "#FAFAF7", "surface-container-highest": "#dce2f7", "surface-card": "#FFFFFF", "on-tertiary": "#ffffff", "outline-variant": "#c7c4d8", "surface-container": "#e9edff", "surface": "#FAFAF7", "inverse-on-surface": "#edf0ff", "on-background": "#141b2b", "surface-variant": "#dce2f7", "on-tertiary-fixed": "#351000", "tertiary-fixed": "#ffdbcc", "on-primary-fixed": "#0f0069", "on-primary": "#ffffff", "tertiary": "#7e3000", "secondary-fixed": "#e2dfff", "surface-container-lowest": "#ffffff", "on-error": "#ffffff", "secondary-fixed-dim": "#c3c0ff", "inverse-surface": "#293040", "surface-dim": "#d3daef", "primary": "#3525cd", "surface-tint": "#4d44e3", "secondary": "#58579b", "border-strong": "#E5E5DF", "on-surface-variant": "#464555", "on-primary-fixed-variant": "#3323cc", "on-error-container": "#93000a", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#413f82", "primary-fixed-dim": "#c3c0ff", "outline": "#777587", "on-secondary": "#ffffff", "primary-container": "#4f46e5", "secondary-container": "#b6b4ff", "tertiary-container": "#a44100", "on-secondary-container": "#454386", "border-subtle": "#EEEEEC", "on-tertiary-fixed-variant": "#7b2f00", "on-primary-container": "#dad7ff", "on-surface": "#141b2b", "surface-bright": "#f9f9ff", "on-tertiary-container": "#ffd2be", "error": "#ba1a1a", "text-muted": "#71717A", "tertiary-fixed-dim": "#ffb695", "surface-container-low": "#f1f3ff", "surface-container-high": "#e1e8fd", "text-subtle": "#A1A1AA" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-md": "0.75rem", "space-xl": "2rem", "space-sm": "0.5rem", "margin": "1.25rem", "gutter": "0.75rem", "space-lg": "1.25rem", "space-xs": "0.25rem" }, fontFamily: { "headline-xl": ["Inter"], "body-md": ["Inter"], "body-lg": ["Inter"], "label-sm": ["Inter"], "headline-sm": ["Inter"], "body-sm": ["Inter"], "headline-md": ["Inter"], "headline-lg": ["Inter"], "label-md": ["Inter"] }, fontSize: { "headline-xl": ["34px", { "lineHeight": "40px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-md": ["15px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-sm": ["17px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-lg": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="h-14 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary-container text-[20px]">filter_vintage</span><h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Upcoming</h1></div><div class="flex items-center gap-space-sm"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center rounded-full text-text-muted hover:text-on-surface"><span class="material-symbols-outlined text-[20px]">search</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-14 pb-28 px-margin bg-surface flex-1"><div class="flex flex-col w-full pb-10">
+<!-- Horizon Sub-header & Quick Filters -->
+<section class="flex flex-col gap-space-sm mb-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Upcoming</span>
+<span class="font-body-sm text-body-sm text-text-muted">Oct 24 – Nov 6 · 14 days</span>
+</div>
+<!-- Sync Status Badge & Action -->
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-full shadow-sm">
+<span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span class="material-symbols-outlined text-[15px] text-primary-container">sync_saved_locally</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">GCal &amp; iCloud</span>
+</div>
+</div>
+<!-- Filter chips -->
+<div class="flex items-center gap-space-xs overflow-x-auto py-1 no-scrollbar">
+<button class="h-8 px-3 rounded-full bg-on-surface text-on-primary font-label-md text-label-md flex items-center gap-1 shadow-sm whitespace-nowrap">
+<span>All 14 days</span>
+</button>
+<button class="h-8 px-3 rounded-full bg-surface-card text-text-muted font-label-md text-label-md flex items-center gap-1 shadow-sm whitespace-nowrap active:bg-surface-container-low">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>With tasks</span>
+</button>
+<button class="h-8 px-3 rounded-full bg-surface-card text-text-muted font-label-md text-label-md flex items-center gap-1 shadow-sm whitespace-nowrap active:bg-surface-container-low">
+<span class="material-symbols-outlined text-[16px]">flag</span>
+<span>Priorities only</span>
+</button>
+<button class="h-8 px-3 rounded-full bg-surface-card text-text-muted font-label-md text-label-md flex items-center gap-1 shadow-sm whitespace-nowrap active:bg-surface-container-low">
+<span class="material-symbols-outlined text-[16px]">calendar_view_week</span>
+<span>Compact</span>
+</button>
+</div>
+</section>
+<!-- Timeline Stream -->
+<div class="flex flex-col gap-space-md">
+<!-- DAY 1: Today · Wed, Oct 24 -->
+<section class="bg-surface-card rounded-xl shadow-sm p-4 flex flex-col gap-3 transition-all duration-200">
+<div class="flex items-center justify-between cursor-pointer" onclick="toggleGroup('day-1', this)">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[20px] transition-transform duration-200 rotate-90 chevron-icon">chevron_right</span>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Today</span>
+<span class="font-body-sm text-body-sm text-text-muted">· Wed, Oct 24</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm bg-primary-fixed text-primary px-2 py-0.5 rounded-full">4 tasks</span>
+<span class="font-label-sm text-label-sm bg-surface-container-low text-text-muted px-2 py-0.5 rounded-full">2h 30m</span>
+</div>
+</div>
+<!-- Task items list -->
+<div class="flex flex-col gap-2 pt-1" id="day-1">
+<!-- Item 1 -->
+<div class="group bg-surface-canvas rounded-lg p-3 flex items-start gap-3 transition-colors hover:bg-surface-container-low">
+<button class="mt-0.5 w-5 h-5 rounded-full flex items-center justify-center bg-surface-card text-transparent shadow-sm flex-shrink-0 transition-colors" onclick="toggleCheck(this)">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</button>
+<div class="flex flex-col gap-1.5 min-w-0 flex-1">
+<span class="task-title font-body-md text-body-md text-on-surface leading-tight transition-all">Finalize Q4 Product Roadmap &amp; Team Review</span>
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="font-label-sm text-label-sm bg-error-container text-on-error-container px-2 py-0.5 rounded-full flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">flag</span>P1
+              </span>
+<span class="font-label-sm text-label-sm bg-surface-card text-text-muted px-2 py-0.5 rounded-full shadow-sm">9:30 AM</span>
+<span class="font-label-sm text-label-sm bg-surface-card text-text-muted px-2 py-0.5 rounded-full shadow-sm">45m</span>
+<span class="font-label-sm text-label-sm bg-surface-card text-secondary px-2 py-0.5 rounded-full shadow-sm">#Product</span>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="group bg-surface-canvas rounded-lg p-3 flex items-start gap-3 transition-colors hover:bg-surface-container-low">
+<button class="mt-0.5 w-5 h-5 rounded-full flex items-center justify-center bg-surface-card text-transparent shadow-sm flex-shrink-0 transition-colors" onclick="toggleCheck(this)">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</button>
+<div class="flex flex-col gap-1.5 min-w-0 flex-1">
+<span class="task-title font-body-md text-body-md text-on-surface leading-tight transition-all">Draft Investor Update memo</span>
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded-full flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">flag</span>P2
+              </span>
+<span class="font-label-sm text-label-sm bg-surface-card text-text-muted px-2 py-0.5 rounded-full shadow-sm">11:00 AM</span>
+<span class="font-label-sm text-label-sm bg-surface-card text-text-muted px-2 py-0.5 rounded-full shadow-sm">1h</span>
+<span class="font-label-sm text-label-sm bg-surface-card text-secondary px-2 py-0.5 rounded-full shadow-sm">#Finance</span>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="group bg-surface-canvas rounded-lg p-3 flex items-start gap-3 transition-colors hover:bg-surface-container-low">
+<button class="mt-0.5 w-5 h-5 rounded-full flex items-center justify-center bg-surface-card text-transparent shadow-sm flex-shrink-0 transition-colors" onclick="toggleCheck(this)">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</button>
+<div class="flex flex-col gap-1.5 min-w-0 flex-1">
+<span class="task-title font-body-md text-body-md text-on-surface leading-tight transition-all">Review Design System Component Specs</span>
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="font-label-sm text-label-sm bg-surface-card text-text-muted px-2 py-0.5 rounded-full shadow-sm">2:00 PM</span>
+<span class="font-label-sm text-label-sm bg-surface-card text-text-muted px-2 py-0.5 rounded-full shadow-sm">45m</span>
+<span class="font-label-sm text-label-sm bg-primary-fixed text-primary px-2 py-0.5 rounded-full shadow-sm">#DesignSystem</span>
+</div>
+</div>
+</div>
+<!-- Minimal Add Button -->
+<button class="mt-1 self-start flex items-center gap-1.5 px-3 py-1.5 rounded-full text-text-muted hover:text-primary-container font-label-md text-label-md active:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Add task</span>
+</button>
+</div>
+</section>
+<!-- DAY 2: Tomorrow · Thu, Oct 25 -->
+<section class="bg-surface-card rounded-xl shadow-sm p-4 flex flex-col gap-3 transition-all duration-200">
+<div class="flex items-center justify-between cursor-pointer" onclick="toggleGroup('day-2', this)">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-text-muted text-[20px] transition-transform duration-200 rotate-90 chevron-icon">chevron_right</span>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Tomorrow</span>
+<span class="font-body-sm text-body-sm text-text-muted">· Thu, Oct 25</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded-full">3 tasks</span>
+<span class="font-label-sm text-label-sm bg-surface-container-low text-text-muted px-2 py-0.5 rounded-full">1h 45m</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 pt-1" id="day-2">
+<!-- Item 1 -->
+<div class="group bg-surface-canvas rounded-lg p-3 flex items-start gap-3 transition-colors hover:bg-surface-container-low">
+<button class="mt-0.5 w-5 h-5 rounded-full flex items-center justify-center bg-surface-card text-transparent shadow-sm flex-shrink-0 transition-colors" onclick="toggleCheck(this)">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</button>
+<div class="flex flex-col gap-1.5 min-w-0 flex-1">
+<span class="task-title font-body-md text-body-md text-on-surface leading-tight transition-all">Email Dana regarding contract renewal</span>
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="font-label-sm text-label-sm bg-error-container text-on-error-container px-2 py-0.5 rounded-full flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">flag</span>P1
+              </span>
+<span class="font-label-sm text-label-sm bg-surface-card text-text-muted px-2 py-0.5 rounded-full shadow-sm">9:00 AM</span>
+<span class="font-label-sm text-label-sm bg-surface-card text-text-muted px-2 py-0.5 rounded-full shadow-sm">15m</span>
+<span class="font-label-sm text-label-sm bg-surface-card text-secondary px-2 py-0.5 rounded-full shadow-sm">#Work</span>
+<span class="font-label-sm text-label-sm bg-surface-container-low text-text-muted px-2 py-0.5 rounded-full">@email</span>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="group bg-surface-canvas rounded-lg p-3 flex items-start gap-3 transition-colors hover:bg-surface-container-low">
+<button class="mt-0.5 w-5 h-5 rounded-full flex items-center justify-center bg-surface-card text-transparent shadow-sm flex-shrink-0 transition-colors" onclick="toggleCheck(this)">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</button>
+<div class="flex flex-col gap-1.5 min-w-0 flex-1">
+<span class="task-title font-body-md text-body-md text-on-surface leading-tight transition-all">Quarterly Studio budget review</span>
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="font-label-sm text-label-sm bg-surface-card text-text-muted px-2 py-0.5 rounded-full shadow-sm">1:30 PM</span>
+<span class="font-label-sm text-label-sm bg-surface-card text-text-muted px-2 py-0.5 rounded-full shadow-sm">1h</span>
+<span class="font-label-sm text-label-sm bg-surface-card text-secondary px-2 py-0.5 rounded-full shadow-sm">#Finance</span>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="group bg-surface-canvas rounded-lg p-3 flex items-start gap-3 transition-colors hover:bg-surface-container-low">
+<button class="mt-0.5 w-5 h-5 rounded-full flex items-center justify-center bg-surface-card text-transparent shadow-sm flex-shrink-0 transition-colors" onclick="toggleCheck(this)">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</button>
+<div class="flex flex-col gap-1.5 min-w-0 flex-1">
+<span class="task-title font-body-md text-body-md text-on-surface leading-tight transition-all">Prep sync agenda for engineering team</span>
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="font-label-sm text-label-sm bg-surface-card text-text-muted px-2 py-0.5 rounded-full shadow-sm">3:30 PM</span>
+<span class="font-label-sm text-label-sm bg-surface-card text-text-muted px-2 py-0.5 rounded-full shadow-sm">30m</span>
+<span class="font-label-sm text-label-sm bg-surface-card text-secondary px-2 py-0.5 rounded-full shadow-sm">#Team</span>
+</div>
+</div>
+</div>
+<button class="mt-1 self-start flex items-center gap-1.5 px-3 py-1.5 rounded-full text-text-muted hover:text-primary-container font-label-md text-label-md active:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Add task</span>
+</button>
+</div>
+</section>
+<!-- DAY 3: Friday, Oct 26 -->
+<section class="bg-surface-card rounded-xl shadow-sm p-4 flex flex-col gap-3 transition-all duration-200">
+<div class="flex items-center justify-between cursor-pointer" onclick="toggleGroup('day-3', this)">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-text-muted text-[20px] transition-transform duration-200 rotate-90 chevron-icon">chevron_right</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Friday, Oct 26</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded-full">2 tasks</span>
+<span class="font-label-sm text-label-sm bg-surface-container-low text-text-muted px-2 py-0.5 rounded-full">1h 15m</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 pt-1" id="day-3">
+<!-- Item 1 -->
+<div class="group bg-surface-canvas rounded-lg p-3 flex items-start gap-3 transition-colors hover:bg-surface-container-low">
+<button class="mt-0.5 w-5 h-5 rounded-full flex items-center justify-center bg-surface-card text-transparent shadow-sm flex-shrink-0 transition-colors" onclick="toggleCheck(this)">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</button>
+<div class="flex flex-col gap-1.5 min-w-0 flex-1">
+<span class="task-title font-body-md text-body-md text-on-surface leading-tight transition-all">Ship release notes for version 2.4</span>
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded-full flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">flag</span>P2
+              </span>
+<span class="font-label-sm text-label-sm bg-surface-card text-text-muted px-2 py-0.5 rounded-full shadow-sm">10:00 AM</span>
+<span class="font-label-sm text-label-sm bg-surface-card text-text-muted px-2 py-0.5 rounded-full shadow-sm">45m</span>
+<span class="font-label-sm text-label-sm bg-surface-card text-secondary px-2 py-0.5 rounded-full shadow-sm">#Product</span>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="group bg-surface-canvas rounded-lg p-3 flex items-start gap-3 transition-colors hover:bg-surface-container-low">
+<button class="mt-0.5 w-5 h-5 rounded-full flex items-center justify-center bg-surface-card text-transparent shadow-sm flex-shrink-0 transition-colors" onclick="toggleCheck(this)">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</button>
+<div class="flex flex-col gap-1.5 min-w-0 flex-1">
+<span class="task-title font-body-md text-body-md text-on-surface leading-tight transition-all">Weekly wrap-up &amp; inbox zero review</span>
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="font-label-sm text-label-sm bg-surface-card text-text-muted px-2 py-0.5 rounded-full shadow-sm">4:30 PM</span>
+<span class="font-label-sm text-label-sm bg-surface-card text-text-muted px-2 py-0.5 rounded-full shadow-sm">30m</span>
+<span class="font-label-sm text-label-sm bg-surface-card text-secondary px-2 py-0.5 rounded-full shadow-sm">#Review</span>
+</div>
+</div>
+</div>
+<button class="mt-1 self-start flex items-center gap-1.5 px-3 py-1.5 rounded-full text-text-muted hover:text-primary-container font-label-md text-label-md active:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Add task</span>
+</button>
+</div>
+</section>
+<!-- DAY 4: Saturday, Oct 27 (Quiet Day Empty State) -->
+<section class="bg-surface-card rounded-xl shadow-sm p-4 flex flex-col gap-3">
+<div class="flex items-center justify-between cursor-pointer" onclick="toggleGroup('day-4', this)">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-text-muted text-[20px] transition-transform duration-200 rotate-90 chevron-icon">chevron_right</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Saturday, Oct 27</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm bg-surface-container-low text-text-muted px-2 py-0.5 rounded-full">0 tasks</span>
+<span class="font-label-sm text-label-sm bg-surface-container-low text-text-muted px-2 py-0.5 rounded-full">0m</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 pt-1" id="day-4">
+<div class="bg-surface-canvas rounded-lg p-3 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-text-subtle text-[18px]">bedtime</span>
+<span class="font-body-sm text-body-sm text-text-muted">Nothing planned · Enjoy the quiet day</span>
+</div>
+<span class="text-text-subtle font-label-sm text-label-sm">Rest</span>
+</div>
+<button class="mt-1 self-start flex items-center gap-1.5 px-3 py-1.5 rounded-full text-text-muted hover:text-primary-container font-label-md text-label-md active:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Add task</span>
+</button>
+</div>
+</section>
+<!-- DAY 5: Sunday, Oct 28 (Collapsed) -->
+<section class="bg-surface-card rounded-xl shadow-sm p-4 flex flex-col gap-3">
+<div class="flex items-center justify-between cursor-pointer" onclick="toggleGroup('day-5', this)">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-text-muted text-[20px] transition-transform duration-200 chevron-icon">chevron_right</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Sunday, Oct 28</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded-full">1 task · 30m</span>
+</div>
+</div>
+<div class="hidden flex-col gap-2 pt-1" id="day-5">
+<div class="bg-surface-canvas rounded-lg p-3 flex items-start gap-3">
+<button class="mt-0.5 w-5 h-5 rounded-full flex items-center justify-center bg-surface-card text-transparent shadow-sm flex-shrink-0" onclick="toggleCheck(this)">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</button>
+<div class="flex flex-col gap-1.5 min-w-0 flex-1">
+<span class="task-title font-body-md text-body-md text-on-surface leading-tight">Weekly family meal prep &amp; market visit</span>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm bg-surface-card text-text-muted px-2 py-0.5 rounded-full shadow-sm">11:00 AM</span>
+<span class="font-label-sm text-label-sm bg-surface-card text-text-muted px-2 py-0.5 rounded-full shadow-sm">30m</span>
+<span class="font-label-sm text-label-sm bg-surface-card text-secondary px-2 py-0.5 rounded-full shadow-sm">#Personal</span>
+</div>
+</div>
+</div>
+<button class="mt-1 self-start flex items-center gap-1.5 px-3 py-1.5 rounded-full text-text-muted hover:text-primary-container font-label-md text-label-md active:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Add task</span>
+</button>
+</div>
+</section>
+<!-- DAY 6: Monday, Oct 29 (Expanded) -->
+<section class="bg-surface-card rounded-xl shadow-sm p-4 flex flex-col gap-3">
+<div class="flex items-center justify-between cursor-pointer" onclick="toggleGroup('day-6', this)">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-text-muted text-[20px] transition-transform duration-200 rotate-90 chevron-icon">chevron_right</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Monday, Oct 29</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded-full">3 tasks</span>
+<span class="font-label-sm text-label-sm bg-surface-container-low text-text-muted px-2 py-0.5 rounded-full">2h</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 pt-1" id="day-6">
+<div class="bg-surface-canvas rounded-lg p-3 flex items-start gap-3">
+<button class="mt-0.5 w-5 h-5 rounded-full flex items-center justify-center bg-surface-card text-transparent shadow-sm flex-shrink-0" onclick="toggleCheck(this)">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</button>
+<div class="flex flex-col gap-1.5 min-w-0 flex-1">
+<span class="task-title font-body-md text-body-md text-on-surface leading-tight">Sprint Planning Session</span>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm bg-surface-card text-text-muted px-2 py-0.5 rounded-full shadow-sm">10:00 AM</span>
+<span class="font-label-sm text-label-sm bg-surface-card text-text-muted px-2 py-0.5 rounded-full shadow-sm">1h</span>
+<span class="font-label-sm text-label-sm bg-surface-card text-secondary px-2 py-0.5 rounded-full shadow-sm">#Engineering</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-canvas rounded-lg p-3 flex items-start gap-3">
+<button class="mt-0.5 w-5 h-5 rounded-full flex items-center justify-center bg-surface-card text-transparent shadow-sm flex-shrink-0" onclick="toggleCheck(this)">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</button>
+<div class="flex flex-col gap-1.5 min-w-0 flex-1">
+<span class="task-title font-body-md text-body-md text-on-surface leading-tight">Design critique with brand agency</span>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm bg-surface-card text-text-muted px-2 py-0.5 rounded-full shadow-sm">2:30 PM</span>
+<span class="font-label-sm text-label-sm bg-surface-card text-text-muted px-2 py-0.5 rounded-full shadow-sm">1h</span>
+<span class="font-label-sm text-label-sm bg-surface-card text-secondary px-2 py-0.5 rounded-full shadow-sm">#Design</span>
+</div>
+</div>
+</div>
+<button class="mt-1 self-start flex items-center gap-1.5 px-3 py-1.5 rounded-full text-text-muted hover:text-primary-container font-label-md text-label-md active:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Add task</span>
+</button>
+</div>
+</section>
+<!-- DAY 7 - DAY 14 Timeline -->
+<div class="flex flex-col gap-space-sm pt-2">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-sm text-label-sm text-text-muted tracking-wider uppercase">Horizon Ahead · Days 7–14</span>
+<span class="font-label-sm text-label-sm text-text-subtle">Week 2</span>
+</div>
+<!-- Tuesday, Oct 30 (Quiet) -->
+<section class="bg-surface-card rounded-xl shadow-sm p-3.5 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-text-subtle text-[18px]">wb_sunny</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">Tuesday, Oct 30</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-text-muted">Nothing planned</span>
+<button class="w-7 h-7 rounded-full bg-surface-canvas flex items-center justify-center text-text-muted active:scale-95">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</section>
+<!-- Wednesday, Oct 31 -->
+<section class="bg-surface-card rounded-xl shadow-sm p-3.5 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">event_note</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">Wednesday, Oct 31</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded-full">2 tasks</span>
+<span class="font-label-sm text-label-sm bg-surface-container-low text-text-muted px-2 py-0.5 rounded-full">1h 30m</span>
+<button class="w-7 h-7 rounded-full bg-surface-canvas flex items-center justify-center text-text-muted active:scale-95">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</section>
+<!-- Thursday, Nov 1 -->
+<section class="bg-surface-card rounded-xl shadow-sm p-3.5 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">event_note</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">Thursday, Nov 1</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded-full">1 task</span>
+<span class="font-label-sm text-label-sm bg-surface-container-low text-text-muted px-2 py-0.5 rounded-full">45m</span>
+<button class="w-7 h-7 rounded-full bg-surface-canvas flex items-center justify-center text-text-muted active:scale-95">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</section>
+<!-- Friday, Nov 2 -->
+<section class="bg-surface-card rounded-xl shadow-sm p-3.5 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">event_note</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">Friday, Nov 2</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded-full">3 tasks</span>
+<span class="font-label-sm text-label-sm bg-surface-container-low text-text-muted px-2 py-0.5 rounded-full">2h 15m</span>
+<button class="w-7 h-7 rounded-full bg-surface-canvas flex items-center justify-center text-text-muted active:scale-95">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</section>
+<!-- Saturday, Nov 3 -->
+<section class="bg-surface-card rounded-xl shadow-sm p-3.5 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-text-subtle text-[18px]">wb_sunny</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">Saturday, Nov 3</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-text-muted">Nothing planned</span>
+<button class="w-7 h-7 rounded-full bg-surface-canvas flex items-center justify-center text-text-muted active:scale-95">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</section>
+<!-- Sunday, Nov 4 -->
+<section class="bg-surface-card rounded-xl shadow-sm p-3.5 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-text-subtle text-[18px]">wb_sunny</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">Sunday, Nov 4</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-text-muted">Nothing planned</span>
+<button class="w-7 h-7 rounded-full bg-surface-canvas flex items-center justify-center text-text-muted active:scale-95">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</section>
+<!-- Monday, Nov 5 -->
+<section class="bg-surface-card rounded-xl shadow-sm p-3.5 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">event_note</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">Monday, Nov 5</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded-full">4 tasks</span>
+<span class="font-label-sm text-label-sm bg-surface-container-low text-text-muted px-2 py-0.5 rounded-full">3h</span>
+<button class="w-7 h-7 rounded-full bg-surface-canvas flex items-center justify-center text-text-muted active:scale-95">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</section>
+<!-- Tuesday, Nov 6 -->
+<section class="bg-surface-card rounded-xl shadow-sm p-3.5 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">event_note</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">Tuesday, Nov 6</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded-full">1 task</span>
+<span class="font-label-sm text-label-sm bg-surface-container-low text-text-muted px-2 py-0.5 rounded-full">30m</span>
+<button class="w-7 h-7 rounded-full bg-surface-canvas flex items-center justify-center text-text-muted active:scale-95">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</section>
+</div>
+</div>
+</div>
+<script>
+  function toggleGroup(id, headerEl) {
+    const content = document.getElementById(id);
+    const chevron = headerEl.querySelector('.chevron-icon');
+    if (!content) return;
+    
+    if (content.classList.contains('hidden')) {
+      content.classList.remove('hidden');
+      content.classList.add('flex');
+      if (chevron) chevron.classList.add('rotate-90');
+    } else {
+      content.classList.add('hidden');
+      content.classList.remove('flex');
+      if (chevron) chevron.classList.remove('rotate-90');
+    }
+  }
+
+  function toggleCheck(buttonEl) {
+    const card = buttonEl.closest('.group') || buttonEl.parentElement;
+    const title = card.querySelector('.task-title');
+    const isChecked = buttonEl.classList.contains('bg-primary-container');
+
+    if (isChecked) {
+      buttonEl.classList.remove('bg-primary-container', 'text-on-primary');
+      buttonEl.classList.add('bg-surface-card', 'text-transparent');
+      if (title) {
+        title.classList.remove('line-through', 'text-text-subtle');
+        title.classList.add('text-on-surface');
+      }
+    } else {
+      buttonEl.classList.remove('bg-surface-card', 'text-transparent');
+      buttonEl.classList.add('bg-primary-container', 'text-on-primary');
+      if (title) {
+        title.classList.add('line-through', 'text-text-subtle');
+        title.classList.remove('text-on-surface');
+      }
+    }
+  }
+</script></main><div class="fixed bottom-24 right-5 z-40 pb-safe"><button aria-label="New Task" class="w-14 h-14 rounded-full bg-primary-container text-on-primary shadow-[0_12px_28px_-4px_rgba(79,70,229,0.35)] flex items-center justify-center hover:opacity-95 transition-transform active:scale-95"><span class="material-symbols-outlined text-[26px]">add</span></button></div><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary-container font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] text-text-muted hover:text-on-surface" data-path="inbox" href="#"><span class="material-symbols-outlined text-[22px]">inbox</span><span class="font-label-sm text-label-sm">Inbox</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] text-text-muted hover:text-on-surface" data-path="today" href="#"><span class="material-symbols-outlined text-[22px]">today</span><span class="font-label-sm text-label-sm">Today</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] text-primary-container font-semibold" data-path="upcoming" href="#"><span class="material-symbols-outlined text-[22px]">calendar_month</span><span class="font-label-sm text-label-sm">Upcoming</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] text-text-muted hover:text-on-surface" data-path="browse" href="#"><span class="material-symbols-outlined text-[22px]">folder_open</span><span class="font-label-sm text-label-sm">Browse</span></a></div></nav></body></html>
