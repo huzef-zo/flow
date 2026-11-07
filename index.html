@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Flow · Calm tasks</title>
+  <meta name="description" content="Flow — calm, offline-first task planner with natural-language quick add and a time-blocked Today timeline. Works without an account or network.">
+  <meta name="theme-color" content="#fafaf7">
+  <meta name="color-scheme" content="light dark">
+
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/views.css">
+
+  <script>
+    /* Pre-paint theme (before CSS loads the page) to avoid a flash. */
+    (function () {
+      try {
+        var t = localStorage.getItem('flow-theme') || 'system';
+        var dark = t === 'dark' || (t === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+        var a = localStorage.getItem('flow-accent');
+        if (a) document.documentElement.style.setProperty('--accent', {
+          indigo: '#4F46E5', teal: '#0D9488', green: '#15803D',
+          amber: '#B45309', rose: '#BE123C', violet: '#7C3AED'
+        }[a] || '#4F46E5');
+      } catch (e) { /* private mode etc. */ }
+    })();
+  </script>
+</head>
+<body>
+  <div id="app">
+    <noscript>
+      <div style="max-width:520px;margin:4rem auto;padding:0 1rem;font-family:system-ui;text-align:center">
+        <h1>Flow needs JavaScript</h1>
+        <p>Flow is a fully local app — everything runs in your browser.
+           Please enable JavaScript and reload.</p>
+      </div>
+    </noscript>
+  </div>
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

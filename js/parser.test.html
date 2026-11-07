@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flow · parser self-check</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         max-width: 860px; margin: 2rem auto; padding: 0 1rem; }
+  h1 { font-size: 1.4rem; } h1 span { font-weight: 400; opacity: .6; }
+  .summary { font-size: 1.1rem; font-weight: 600; margin: 1rem 0; padding: .6rem .9rem;
+             border-radius: 10px; background: #e8f5e9; color: #1b5e20; }
+  .summary.bad { background: #fdecea; color: #b71c1c; }
+  table { border-collapse: collapse; width: 100%; margin-top: 1rem; }
+  td, th { text-align: left; padding: .45rem .6rem; border-bottom: 1px solid #ddd; vertical-align: top; }
+  code { background: #f2f2f2; padding: .1rem .35rem; border-radius: 5px; font-size: .9em; }
+  tr.fail { background: #fdecea; }
+  .ok { color: #1b5e20; font-weight: 600; } .no { color: #b71c1c; font-weight: 600; }
+  .issues { color: #b71c1c; font-size: .85rem; white-space: pre-wrap; }
+  a { color: #4f46e5; }
+</style>
+</head>
+<body>
+<h1>Flow quick-add parser <span>· self-check</span></h1>
+<p>These are the same cases <code>node js/parser.test.js</code> runs, executed live
+in your browser against the shipped <code>parser.js</code>. Fixed reference time:
+<b>Saturday, Nov 7 2026, 09:00</b>, week starts Monday.</p>
+<div id="summary" class="summary">running…</div>
+<table id="results">
+  <thead><tr><th>Status</th><th>Input</th><th>Issues</th></tr></thead>
+  <tbody></tbody>
+</table>
+<script type="module">
+  import { runTests, runBehaviourTests } from './parser.test.js';
+  const a = runTests();
+  const b = runBehaviourTests();
+  const all = [...a.results, ...b.results];
+  const okCount = all.filter(r => r.ok).length;
+  const summary = document.getElementById('summary');
+  summary.textContent = `${okCount}/${all.length} checks passed` + (okCount === all.length ? ' — all green' : ' — see failures below');
+  if (okCount !== all.length) summary.classList.add('bad');
+  const tbody = document.querySelector('#results tbody');
+  for (const r of all) {
+    const tr = document.createElement('tr');
+    if (!r.ok) tr.className = 'fail';
+    const label = r.input ?? r.name;
+    tr.innerHTML = `<td class="${r.ok ? 'ok' : 'no'}">${r.ok ? 'PASS' : 'FAIL'}</td>
+      <td><code>${label.replace(/[<>&]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]))}</code></td>
+      <td class="issues">${(r.issues || []).join('\n')}</td>`;
+    tbody.appendChild(tr);
+  }
+</script>
+</body>
+</html>
