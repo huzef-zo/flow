@@ -15,7 +15,7 @@
  * activate and the new worker takes over via the SKIP_WAITING message.
  */
 
-const VERSION = 'flow-v1.1.0';
+const VERSION = 'flow-v1.1.1';
 const SHELL_CACHE = VERSION + '-shell';
 const RUNTIME_CACHE = VERSION + '-runtime';
 

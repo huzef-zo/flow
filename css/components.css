@@ -297,14 +297,20 @@ input[type="date"].input, input[type="time"].input { -webkit-appearance: none; a
 
 /* ---------- Selection bar ---------- */
 .select-bar {
-  position: fixed; left: 50%; transform: translate(-50%, 140%);
+  position: fixed; left: 50%;
+  transform: translate(-50%, calc(100% + var(--tabbar-h) + var(--safe-bottom) + 24px));
   bottom: calc(var(--tabbar-h) + var(--safe-bottom) + 12px);
   display: flex; align-items: center; gap: 4px;
   background: var(--surface-card); border: 1px solid var(--border-subtle);
   border-radius: var(--radius-full); padding: 4px 12px; box-shadow: var(--shadow-3);
-  transition: transform var(--anim-slow); z-index: 150; max-width: calc(100vw - 24px);
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transition: transform var(--anim-slow), opacity var(--anim), visibility var(--anim);
+  z-index: 150; max-width: calc(100vw - 24px);
 }
-.select-bar.open { transform: translate(-50%, 0); }
+.select-bar.open {
+  transform: translate(-50%, 0);
+  opacity: 1; visibility: visible; pointer-events: auto;
+}
 .select-count { font-weight: 600; font-size: 13px; padding: 0 8px; white-space: nowrap; color: var(--text); }
 .select-spacer { flex: 1; }
 .select-action { width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; color: var(--text-muted); }
